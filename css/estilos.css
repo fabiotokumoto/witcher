@@ -299,11 +299,11 @@ h2 {
 
 .card-frente,
 .card-verso {
+  backface-visibility: hidden;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
-  backface-visibility: hidden;
-}
+    }
 
 .card-verso {
   position: relative;
@@ -311,7 +311,8 @@ h2 {
   transform: rotateY(180deg);
 }
 
-.card-verso .nome-verso {
+.nome-verso {
+  backface-visibility: hidden;
   color: whitesmoke;
   font-size: 0.9em;
   font-weight: bold;
@@ -321,7 +322,7 @@ h2 {
   text-decoration: underline;
   text-transform: uppercase;
   top: 50%;
-  transform: translate(-50%, calc(-50% - 5px));
+  transform: translate(-50%, calc(-50% - 5px)) rotateY(180deg);
 }
 
 .img-portfolio {
