@@ -118,15 +118,39 @@ h2 {
 }
 
 .tittle-box {
-  transform: translate(0, 30px);
+  transform: translate(0, 50px);
   padding: 40px;
   opacity: 1;
   animation: opacidade;
 }
 
+@media (max-height: 420px) {
+  .tittle-box {
+        transform: translate(0, 20px);
+  }
+}
+
 @media (min-width: 450px) and (min-height:420px) {
   .tittle-box {
        transform: translate(0, 50px);
+  }
+}
+
+@media (min-width: 600px) and (min-height:420px) {
+  .tittle-box {
+        transform: translate(0, 100px);
+  }
+}
+
+@media (min-width: 800px) and (min-height:420px) {
+  .tittle-box {
+        transform: translate(0, 150px);
+  }
+}
+
+@media (min-width: 1200px) and (min-height:420px) {
+  .tittle-box {
+        transform: translate(0, 120px);
   }
 }
 
@@ -157,7 +181,6 @@ h2 {
         font-size: 7em;
   }
 }
-
 
 .site-subtittle {
   color: rgb(124, 115, 124);
@@ -196,10 +219,51 @@ h2 {
 }
 }
 
+.arrow {
+    display: flex;
+    justify-content: center;
+}
+
 .arrow img {
-  width: 60px;
+  color: #7c737c;
+  display: block;
+  width: 40px;
   height: auto;
-  margin-top: 150px;
+  margin-top: 60px;
+  opacity: .6;
+  transition: opacity .3s ease;
+}
+
+@media (max-height: 420px) {
+  .arrow img {
+        width: 0px;
+        margin: 0;
+  }
+}
+
+@media (min-width: 600px) and (min-height:420px) {
+  .arrow img {
+       margin-top: 150px;
+       width: 50px;       
+  }
+}
+
+@media (min-width: 800px) and (min-height:420px) {
+  .arrow img {
+        margin-top: 220px;
+        width: 70px;    
+  }
+}
+
+@media (min-width: 1200px) and (min-height:420px) {
+  .arrow img {
+        margin-top: 150px;
+        width: 50px; 
+  }
+}
+
+.arrow img:hover {
+  opacity: 1;
 }
 
 .body-padding {
@@ -232,6 +296,12 @@ h2 {
 .portfolio {
   padding-top: 5em;
   background-color: none;
+}
+
+@media (max-height: 420px) {
+  .portfolio {
+        padding-top: 2em;
+  }
 }
 
 @media (min-width: 600px) {
@@ -445,9 +515,8 @@ h2 {
   text-decoration: none;
 }
 
-.link-secundario {
-  color: dimgrey;
-  text-decoration: none;
+.content-box p a:hover {
+  color: rgb(3, 132, 141);
 }
 
 .content-box hr {
@@ -516,9 +585,20 @@ h2 {
 }
 
 .footer {
-  background-color: #180e12;
-  color: rgba(150, 114, 114, 0.623);
+  background-color: #221218;
+  color: rgba(175, 131, 131, 0.623);
   font-size: .8em;
   letter-spacing: .1em;
-  padding: 15px 0px;
+  line-height: 1.5em;
+  padding: 15px 0 10px 0;
+}
+
+.footer a {
+  color: rgba(175, 131, 131, 0.623);
+  text-decoration: none;
+}
+
+.textinho {
+  font-size: .8em;
+  opacity: .6;
 }
