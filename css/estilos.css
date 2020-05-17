@@ -50,6 +50,10 @@ h2 {
 }
 
 .home {
+  background-image: url(../img/fire.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
   display: flex;
   min-height: 100vh;
   justify-content: center;
@@ -62,9 +66,22 @@ h2 {
   position: fixed;
   width: 100vw;
   top: 0;
-  padding: 20px 0;
+  padding: 15px 0;
   z-index: 1;
 }
+
+@media (max-height: 420px) {
+  .menu {
+        padding: 10px 0;
+  }
+}
+
+@media (min-width: 450px) and (min-height:420px) {
+  .menu {
+        padding: 20px 0;
+  }
+}
+
 
 .menu-items {
   max-width: 400px;
@@ -93,7 +110,7 @@ h2 {
 
 .menu a:hover,
 .menu a:active {
-  color: #a7764e;
+  color: rgb(214, 58, 58);
 }
 
 .hero-text {
@@ -111,26 +128,6 @@ h2 {
   .tittle-box {
        transform: translate(0, 50px);
   }
-}
-
-.tittle-box img {
-  width: 120px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
-@media (max-height: 420px) {
-  .tittle-box img {
-        width: 110px;
-  }
-}
-
-@media (min-width: 450px) and (min-height:420px) {
-  .tittle-box img {
-    width: 170px;
-}
 }
 
 .site-tittle,
@@ -177,6 +174,32 @@ h2 {
        margin-top: 15px;
        margin-bottom:15px;
   }
+}
+
+.tittle-box img {
+  width: 120px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media (max-height: 420px) {
+  .tittle-box img {
+        width: 110px;
+  }
+}
+
+@media (min-width: 450px) and (min-height:420px) {
+  .tittle-box img {
+    width: 170px;
+}
+}
+
+.arrow img {
+  width: 60px;
+  height: auto;
+  margin-top: 150px;
 }
 
 .body-padding {
@@ -440,9 +463,9 @@ h2 {
 }
 
 .default-button {
-  background-color: #b89566;
+  background-color: #91796a;
   border-radius: 3px;
-  box-shadow: 0 2px 0 0 #a16e45;
+  box-shadow: 0 2px 0 0 #835c4c;
   color: whitesmoke;
   cursor: pointer;
   display: block;
@@ -451,7 +474,7 @@ h2 {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: background-color .3s ease-in-out;
+  transition: background-color .6s ease, box-shadow .6s ease;
   padding: 20px;
   border: none;
   margin: 20px 0;
@@ -459,8 +482,8 @@ h2 {
 
 .default-button:active,
 .default-button:hover {
-  background-color: #a7764e;  
-  box-shadow: 0 2px 0 0 #91623b;
+  background-color: rgb(211, 95, 80);  
+  box-shadow: 0 2px 0 0 rgb(197, 51, 31),0 3px 6px 0 rgba(233, 60, 37, 0.548) ;
 }
 
 .contato {
@@ -497,6 +520,5 @@ h2 {
   color: rgba(150, 114, 114, 0.623);
   font-size: .8em;
   letter-spacing: .1em;
-  opacity: .8;
   padding: 15px 0px;
 }
